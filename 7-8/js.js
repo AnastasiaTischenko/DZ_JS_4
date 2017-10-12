@@ -4,10 +4,13 @@ document.getElementById('log-in').onclick = function(){
     if (age == undefined || age == ""){
         alert('Please enter your age!');
     }
+    else if (age < 16){
+        alert('You are too young!');
+    }
     else if (age > 16){
         alert('Welcome!');
     }
     else{
-        alert('You are too young!');
+        alert('Please enter corect age!');
     }
 }

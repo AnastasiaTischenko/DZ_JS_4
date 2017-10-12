@@ -27,7 +27,8 @@ function f1(){
         count++;
     }
     if (count == 3){
-        alert(count + ' попытки');
+        out.innerHTML = 'Вы исчерпали свои 3 попытки';
+        document.getElementById('btn').disabled = true;
         count = 0;
     }
 }
