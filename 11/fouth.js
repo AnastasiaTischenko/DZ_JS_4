@@ -16,6 +16,9 @@ function f1(){
     
     if (num == prNum) {
         out.innerHTML = 'Вы угадали!';
+        if (count == 3){
+            document.getElementById('btn').disabled = true;
+        }
         count++;
     }
     else if (num > prNum){
