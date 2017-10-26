@@ -10,29 +10,27 @@ function f1(){
     var num, out;
     // from 1 to 10
     
-    
     num = document.getElementById('mynum').value;
     out = document.getElementById('out');
-    
-    if (num == prNum) {
-        out.innerHTML = 'Вы угадали!';
-        if (count == 3){
-            document.getElementById('btn').disabled = true;
-        }
-        count++;
-    }
-    else if (num > prNum){
-        out.innerHTML = 'Вы ввели число больше чем нужно';
-        count++;
-    }
-    else {
-        out.innerHTML = 'Вы ввели число меньше чем нужно';
-        count++;
-    }
     if (count == 3){
         out.innerHTML = 'Вы исчерпали свои 3 попытки';
         document.getElementById('btn').disabled = true;
-        count = 0;
+            
+    }
+    else if (num > prNum){
+        out.innerHTML = 'Вы ввели число больше чем нужно'; 
+        count++;
+    }
+    else if (num < prNum){
+        out.innerHTML = 'Вы ввели число меньше чем нужно';
+        count++;
+    }
+    else if (num == prNum){
+        out.innerHTML = 'Вы угадали!';
+        document.getElementById('btn').disabled = true;
+    }
+    else{
+        count++; 
     }
 }
 
